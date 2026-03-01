@@ -24,6 +24,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "CameraZoomCycle",
+                    "type": "Button",
+                    "id": "7f83d09d-37e8-4755-b90b-673074a58175",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "5b92a876-2fd3-4cb0-931f-3b090dd54ba5",
@@ -210,6 +219,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "BuildModeToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "064f5cd3-a3e3-40a8-844b-b1b168540d29",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "CameraZoomCycle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

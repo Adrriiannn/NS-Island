@@ -53,6 +53,8 @@
     <Compile Include="Assets\_NSI\Player\PlayerMotorSimple.cs" />
     <Compile Include="Assets\_NSI\Core\BootstrapLoader.cs" />
     <Compile Include="Assets\_NSI\Core\InputRouter.cs" />
+    <Compile Include="Assets\_NSI\Camera\CameraDistanceCycler.cs" />
+    <Compile Include="Assets\_NSI\Camera\MoveFrameYawSync.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

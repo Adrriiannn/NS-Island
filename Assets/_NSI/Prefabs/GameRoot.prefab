@@ -100,6 +100,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraRig
       objectReference: {fileID: 0}
+    - target: {fileID: 2864100000000000013, guid: 5b64b91d8c2d58d4fac3b0f5d9a8bfed, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 3317441220022334455}
+    - target: {fileID: 2864100000000000013, guid: 5b64b91d8c2d58d4fac3b0f5d9a8bfed, type: 3}
+      propertyPath: Target.LookAtTarget
+      value: 
+      objectReference: {fileID: 3317441220022334455}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -264,6 +272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3240560223595837644, guid: 0e6e22ad59afadd48981c5beb5eb4abe, type: 3}
+      propertyPath: moveFrame
+      value: 
+      objectReference: {fileID: 6799001122334455667}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -273,4 +285,14 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6084458504222254486, guid: 0e6e22ad59afadd48981c5beb5eb4abe, type: 3}
   m_PrefabInstance: {fileID: 6144664341108900066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3317441220022334455 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4181122334455667712, guid: 0e6e22ad59afadd48981c5beb5eb4abe, type: 3}
+  m_PrefabInstance: {fileID: 6144664341108900066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6799001122334455667 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2864100000000000022, guid: 5b64b91d8c2d58d4fac3b0f5d9a8bfed, type: 3}
+  m_PrefabInstance: {fileID: 3974919425054242307}
   m_PrefabAsset: {fileID: 0}

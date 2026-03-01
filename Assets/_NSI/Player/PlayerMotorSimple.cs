@@ -5,6 +5,8 @@ public sealed class PlayerMotorSimple : MonoBehaviour
 {
     [SerializeField] private float walkSpeed = 4f;
     [SerializeField] private float sprintSpeed = 6.5f;
+    [SerializeField] private float rotationSpeed = 12f;
+    [SerializeField] private Transform moveFrame;
 
     private CharacterController _characterController;
     private InputRouter _inputRouter;
@@ -34,10 +36,28 @@ public sealed class PlayerMotorSimple : MonoBehaviour
         }
 
         Vector2 moveInput = _inputRouter.Move;
-        Vector3 planarMove = new Vector3(moveInput.x, 0f, moveInput.y);
+        Vector3 frameForward = moveFrame != null ? moveFrame.forward : Vector3.forward;
+        Vector3 frameRight = moveFrame != null ? moveFrame.right : Vector3.right;
+
+        frameForward.y = 0f;
+        frameRight.y = 0f;
+
+        frameForward.Normalize();
+        frameRight.Normalize();
+
+        Vector3 planarMove = frameForward * moveInput.y + frameRight * moveInput.x;
         if (planarMove.sqrMagnitude > 1f)
         {
             planarMove.Normalize();
+        }
+
+        if (planarMove.sqrMagnitude > 0.001f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(planarMove, Vector3.up);
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRotation,
+                rotationSpeed * Time.deltaTime);
         }
 
         float speed = _inputRouter.SprintHeld ? sprintSpeed : walkSpeed;
