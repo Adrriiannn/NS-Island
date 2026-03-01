@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assets\_NSI\Core\GameRootInstaller.cs" />
     <Compile Include="Assets\_NSI\Core\BootstrapLoader.cs" />
+    <Compile Include="Assets\_NSI\Core\InputRouter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
