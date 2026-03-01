@@ -1,0 +1,4 @@
+repository "NS Island/NS Island@1375820598374@cloud"
+  path "/"
+    br "/main"
+    co "/main"
